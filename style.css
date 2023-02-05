@@ -1,0 +1,108 @@
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: #f4dfba;
+  color: #997157;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+}
+
+section {
+  width: 50vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.section-image div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container a {
+  text-decoration: none;
+  color: #997157;
+  font-size: small;
+  display: block;
+  margin-top: 0.5rem;
+  text-align: end;
+}
+
+.container-form {
+  box-sizing: border-box;
+  width: 500px;
+  height: 500px;
+  padding: 15px 0;
+  background-color: #eac480;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+form {
+  width: 60%;
+  flex-grow: 1;
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+}
+
+.form-fields {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field input {
+  background-color: transparent;
+  border: 2px solid #997157;
+  border-radius: 10px;
+  color: #997157;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 10px 10px;
+  outline: none;
+}
+
+.field input:hover {
+  opacity: 0.8;
+}
+
+.field input:focus {
+  background-color: #edbf6f;
+}
+
+.field input:focus::placeholder {
+  color: transparent;
+}
+
+.btn-submit {
+  background-color: #997157;
+  color: #eac480;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-size: 1.2rem;
+}
+
+.btn-submit:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
