@@ -1,3 +1,33 @@
+/* Mensagem de erro do formulário */
+.form-msg {
+  color: #b13a2c;
+  background: #fff6f4;
+  border: 1px solid #e0b4b4;
+  border-radius: 8px;
+  font-size: 0.98rem;
+  margin-top: 0.5rem;
+  padding: 6px 0 6px 0;
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-10px); }
+  40% { transform: translateX(10px); }
+  60% { transform: translateX(-8px); }
+  80% { transform: translateX(8px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
 main {
   width: 100vw;
   min-height: 100vh;
@@ -5,11 +35,61 @@ main {
   background-color: #D4F3DB;
   color: #7A5C3E; /* marrom mais suave */
   font-family: "Poppins", sans-serif;
+
+.container-form h1 {
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+}
+
+}
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  gap: 1.2rem;
+}
+
+.form-fields {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 h1 {
+
+.field {
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  align-items: center;
+}
   font-size: 2.5rem;
+.field input {
+  width: 100%;
+  max-width: 350px;
+}
   margin-top: 2rem;
+.btn-submit {
+  background-color: #7A5C3E;
+  color: #D4F3DB;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  width: auto;
+}
 }
 
 section {
@@ -99,10 +179,12 @@ form {
   gap: 1rem;
 }
 
+
 .field {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  position: relative;
 }
 
 .field input {
@@ -112,8 +194,36 @@ form {
   color: #7A5C3E;
   font-weight: bold;
   font-size: 1.2rem;
-  padding: 10px 10px;
+  padding: 10px 40px 10px 10px; /* espaço para o ícone */
   outline: none;
+  box-sizing: border-box;
+}
+/* Ícone de mostrar/ocultar senha */
+.toggle-password-btn {
+  position: absolute;
+  top: 70%;
+  right: 12px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  z-index: 2;
+}
+.toggle-password-btn svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+  fill: #444;
+  transition: fill 0.2s;
+}
+.toggle-password-btn:hover svg {
+  fill: #222;
 }
 
 .field input:hover {
@@ -124,6 +234,10 @@ form {
   background-color: #D4F3DB;
 }
 
+.field input::placeholder {
+  color: #7A5C3E;
+  opacity: 1;
+}
 .field input:focus::placeholder {
   color: transparent;
 }
